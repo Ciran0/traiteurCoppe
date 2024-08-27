@@ -20,7 +20,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       state(
         'closed',
         style({
-          left: '-150vw'
+          left: '-111vw'
         })
       ),
       transition('open => closed', [animate('0.5s ease-in-out')]),
@@ -33,6 +33,5 @@ export class NavbarComponent{
     isOpen = false;
   toggle() {
     this.isOpen = !this.isOpen;
-    console.log("hello world");
   }
 }
