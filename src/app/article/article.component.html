@@ -1,0 +1,55 @@
+<div class="article">
+  <img class="picture" />
+  <p class="text">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare velit
+    nec lectus placerat bibendum. Sed dapibus, ante ac porttitor pulvinar, nisi
+    lorem rhoncus leo, nec suscipit tortor risus eget nunc. Nullam felis libero,
+    tempor sit amet diam at, tristique auctor dui. Nulla sed lobortis tortor.
+    Donec auctor maximus facilisis. Phasellus pellentesque ex id ante sagittis
+    tempus. Cras mattis vitae nibh nec scelerisque. Vestibulum ante ipsum primis
+    in faucibus orci luctus et ultrices posuere cubilia curae; Etiam commodo
+    arcu id elit posuere dapibus eget vitae tortor.
+  </p>
+</div>
+<style>
+@media (min-width: 600px) and (max-width: 1200px){
+  .article {
+    width: 45vw;
+  }
+}
+@media (min-width: 1200px){
+  .article {
+    width: 30vw;
+  }
+}
+@media (max-width: 600px){
+  .article {
+    width: 90vw;
+  }
+}
+  .text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    max-height: 100%;
+    width: 45%;
+    white-space: unset;
+    margin-left: 1vw;
+  }
+
+  .picture {
+    align-self: center;
+    margin: 2%;
+    height: 100%;
+    width: 45%;
+    border-radius: 2vw;
+  }
+
+  .article {
+    aspect-ratio: 1.75;
+    margin-top: 25px;
+    border-radius: 2vw;
+    display: flex;
+    justify-content: space-between;
+  background: pink;
+  }
+</style>
