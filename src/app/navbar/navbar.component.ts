@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [ProfileCardComponent],
+  imports: [ProfileCardComponent, RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   animations: [
@@ -33,5 +34,10 @@ export class NavbarComponent{
     isOpen = false;
   toggle() {
     this.isOpen = !this.isOpen;
+  }
+  close(){
+    if(this.isOpen){
+      this.isOpen = false;
+    }
   }
 }

@@ -1,5 +1,5 @@
 <div class="nav">
-  <svg class="logo" width="105px" height="92px" viewBox="0 0 56.360085 46.405453" version="1.1" id="svg1"
+  <svg (click)="close()" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page" class="logo" width="105px" height="92px" viewBox="0 0 56.360085 46.405453" version="1.1" id="svg1"
     xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
     <defs id="defs1" />
     <g id="layer1">
@@ -58,14 +58,14 @@
       </g>
     </g>
   </svg>
-  <h1>Traiteur Coppe</h1>
+  <h1 (click)="close()" routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Traiteur Coppe</h1>
   <div class="menu">
-    <p class="page">menus</p>
-    <p class="page">contact</p>
-    <p class="page">login/signup</p>
+    <p routerLink="/menus" routerLinkActive="active" ariaCurrentWhenActive="page" class="page">menus</p>
+    <p routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" class="page">contact</p>
+    <p  class="page">login/signup</p>
     <p class="page">sign off</p>
-    <p class="page">admin</p>
-    <app-profile-card class="test"/>
+    <p routerLink="/admin" routerLinkActive="active" ariaCurrentWhenActive="page" class="page">admin</p>
+    <app-profile-card routerLink="/profile" routerLinkActive="active" ariaCurrentWhenActive="page" class="test"/>
   </div>
   <svg (click)="toggle()" class="burger" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path
@@ -74,10 +74,12 @@
   </svg>
 </div>
 <div [@openClose]="isOpen ? 'open' : 'closed'" class="side">
-  <app-profile-card />
-  <p class="spage">menus</p>
-  <p class="spage">contact</p>
+  <app-profile-card (click)="close()" routerLink="/profile" routerLinkActive="active" ariaCurrentWhenActive="page"/>
+  <p (click)="close()" routerLink="/menus" routerLinkActive="active" ariaCurrentWhenActive="page" class="spage">menus</p>
+  <p (click)="close()" routerLink="/contact" routerLinkActive="active" ariaCurrentWhenActive="page" class="spage">contact</p>
   <p class="spage">login/signup</p>
   <p class="spage">sign off</p>
-  <p class="spage">admin</p>
+  <p (click)="close()" routerLink="/admin" routerLinkActive="active" ariaCurrentWhenActive="page" class="spage">admin</p>
 </div>
+
+<div class="navstop"></div>
