@@ -6,11 +6,17 @@
   .menu {
     display: none;
   }
+  .side{
+    display: flex;
+  }
 }
 
 @media (min-width: 850px) {
   .burger {
     display: none;
+  }
+  .side{
+    display:none;
   }
 
   .menu {
@@ -21,30 +27,6 @@
   }
 }
 
-.page.profile {
-  display: flex;
-  background: none;
-  padding: 0;
-  align-items: center;
-  column-gap: 15px;
-}
-
-.forks {
-  display: flex;
-  align-items: center;
-}
-
-.fork {
-  height: 25px;
-  aspect-ratio: 1;
-}
-
-.profile-pic {
-  width: 60px;
-  height: 60px;
-  background: white;
-  border-radius: 50%;
-}
 
 .page {
   background: lightpink;
@@ -88,6 +70,7 @@ body {
   border-radius: 0px;
   justify-content: space-between;
   align-items: center;
+  z-index: 2;
 }
 
 .logo {
