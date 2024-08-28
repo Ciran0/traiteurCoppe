@@ -15,12 +15,6 @@ export class ProfileComponent {
   newpswd: string = '';
   newpswdconf: string = '';
 
-
-  onSubmit() {
-    console.log(`Nom: ${this.nom}`);
-    console.log(`Email: ${this.email}`);
-    //Ici on peut envoyer les données à un service ou à une API
-  }
   modUsername(){}
   modEmail(){}
   modPswd(){}

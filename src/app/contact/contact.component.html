@@ -1,1 +1,48 @@
-<p>contact works!</p>
+<div class="info">
+ <p class="contactemail">traiteurCoppe&#64;hotmail.be</p>
+  <p class="contactphone">+32 488 987 381</p>
+</div>
+<form class="contactForm">
+  <p class="contactFormTitle">Formulaire de contacte en ligne</p>
+    <label for="bookingname">A quel nom</label>
+    <input type="text" [(ngModel)]="bookingname" name="bookingname" />
+  <label for="ordernumber">Pour combien de personnes</label>
+    <input type="number" min="6" max="120" [(ngModel)]="ordernumber" name="ordernumber" />
+  <label for="orderday">Pour quand</label>
+  <input type="datetime-local" [(ngModel)]="orderday" name="orderday" value="">
+  <label for="ordertype">Quel genre</label>
+  <select [(ngModel)]="ordertype" name="ordertype">
+    <option value="buffet">buffet</option>
+    <option value="domicile">a domicile</option>
+    <option value="here">sur place</option>
+  </select>
+  <div [(ngModel)]="restrictions" name="restrictions">
+  <label for="restictions">Restrictions</label>
+  <input type="checkbox" id="nono1" name="nono1" value="vegetarian">
+  <label for="nono1">vegetarien</label>
+  <input type="checkbox" id="nono2" name="nono2" value="vegan">
+  <label for="nono2">vegan</label>
+  <input type="checkbox" id="nono3" name="nono3" value="gluten">
+  <label for="nono3">gluten</label>
+  <input type="checkbox" id="nono4" name="nono4" value="sugar">
+  <label for="nono4">sugar</label>
+  <input type="checkbox" id="nono5" name="nono5" value="shelfish">
+  <label for="nono5">fruits de mer</label>
+  <input type="checkbox" id="nono6" name="nono6" value="alcohol">
+  <label for="nono6">alcohol</label>
+  <input type="text" name="otherrest">
+  <label for="otherrest">autre</label>
+  </div>
+  <label for="budget">prix par personne</label>
+  <input type="number" name="budget" value="budget" [(ngModel)]="budget" min="50">
+  <label for="comment">autre commenatires</label>
+  <textarea rows="3" cols="40" name="comment" [(ngModel)]="comment"></textarea>
+  <label for="contactoption">option de contacte</label>
+  <input type="radio" name="sms" value="sms" [(ngModel)]="contactoption">
+  <label for="sms">par sms</label>
+  <input type="radio" name="call" value="call" [(ngModel)]="contactoption">
+  <label for="call">par appel</label>
+  <input type="radio" name="mail" value="mail" [(ngModel)]="contactoption">
+  <label for="mail">par mail</label>
+  <button type="submit" (click)="sendContact()">envoyer</button>
+</form>
