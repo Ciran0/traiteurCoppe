@@ -1,5 +1,6 @@
-<div class="user-manager">
-  <label for="username">rechercher un utilisateur a gerer</label>
+<div class="a user-manager">
+  <p>User manager</p>
+  <label for="username">rechercher un utilisateur a gerer</label><br />
   <input type="text" name="username" />
   <div class="user-list">
     <app-user-manager />
@@ -7,11 +8,10 @@
     <app-user-manager />
   </div>
 </div>
-<div class="menu-manager">
-  <div class="new-menu">
-
-  </div>
-  <label for="menu-title">rechercher un menu a modifier</label>
+<div class="a menu-manager">
+  <p>Menu manager</p>
+  <div class="new-menu"></div>
+  <label for="menu-title">rechercher un menu a modifier</label><br />
   <input type="text" name="menu-title" />
   <div class="menu-list">
     <app-menu-manager />
@@ -19,10 +19,9 @@
     <app-menu-manager />
   </div>
 </div>
-<div class="news-manager">
-  <div class="new-news">
-
-  </div>
+<div class="a news-manager">
+  <p>news manager</p>
+  <div class="new-news"></div>
   <label for="news-title">rechercher un article a modifier</label><br />
   <input type="text" name="news-tite" />
   <div class="news-list">
@@ -31,3 +30,15 @@
     <app-news-manager />
   </div>
 </div>
+<style>
+.a{
+  background: pink;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 95vw;
+  height: auto;
+  border-radius: 20px;
+  padding:10px;
+}
+
+</style>
