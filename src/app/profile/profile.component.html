@@ -1,1 +1,33 @@
-<p>profile works!</p>
+<div class="card">
+  <div class="pic">pic</div>
+  <div class="forks">forks</div>
+</div>
+<div class="infos">
+  <p>username</p>
+  <p>email address</p>
+</div>
+<div class="modify">
+  <form class="username">
+    <label for="nom">changer le nom d'utilisateur</label>
+    <input type="text" [(ngModel)]="nom" name="nom" value="JonDoe"/>
+    <button type="submit" (click)="modUsername()">
+      confirmer    </button>
+  </form>
+  <form class="email">
+    <label for="email">changer l'addresse email</label>
+    <input type="email" [(ngModel)]="email" name="email" value="JonDoe@gmail.com"/>
+    <button type="submit" (click)="modEmail()">
+    confirmer
+    </button>
+  </form>
+  <form class="password">
+    <p>changer le mot de passe</p>
+    <label for="oldpswd">mot de passe actuel</label>
+    <input type="password" [(ngModel)]="oldpswd" name="oldpswd" />
+    <label for="newpswd">nouveau mot de passe</label>
+    <input type="password" [(ngModel)]="newpswd" name="newpswd" />
+    <label for="newpswdconf">confirmer le nouveau mot de passe</label>
+    <input type="password" [(ngModel)]="newpswdconf" name="newpswdconf" />
+    <button type="submit" (click)="modPswd()">changer le mot de passe</button>
+  </form>
+</div>
