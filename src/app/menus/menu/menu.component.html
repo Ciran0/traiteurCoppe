@@ -1,0 +1,49 @@
+<div class="menu">
+<img class="menu-icon">
+  <p class="menu-title">random menu</p>
+  <div class="menu-txt">
+
+  </div>
+</div>
+
+<style>
+.menu-txt{
+  width: 100%;
+  height: 100%;
+  background: lightpink;
+  border-radius: 0 0 25px 25px;
+}
+.menu {
+  aspect-ratio:calc(1/1.61803398875)  ;
+  background: pink;
+  margin-bottom: 30px;
+  border-radius: 25px;;
+  display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5%;
+}
+.menu-icon{
+  width: 30%;
+  aspect-ratio: 1;
+border-radius: 50%;
+  background: white;
+
+}
+@media (min-width: 600px) and (max-width: 1200px){
+  .menu {
+    width: 45vw;
+  }
+}
+@media (min-width: 1200px){
+  .menu {
+    width: 30vw;
+  }
+}
+@media (max-width: 600px){
+  .menu {
+    width: 90vw;
+  }
+}
+</style>

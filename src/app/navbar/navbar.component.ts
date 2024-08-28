@@ -21,7 +21,8 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
       state(
         'closed',
         style({
-          left: '-111vw'
+          left: '100vw',
+          opacity: 0
         })
       ),
       transition('open => closed', [animate('0.5s ease-in-out')]),
