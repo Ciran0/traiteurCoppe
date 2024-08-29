@@ -4,11 +4,13 @@ import { MenusComponent } from './menus/menus.component';
 import { ContactComponent } from './contact/contact.component';
 import { AdminComponent } from './admin/admin.component';
 import { ProfileComponent } from './profile/profile.component';
+import { SignupComponent } from './signup/signup.component';
 
 export const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'menus', component: MenusComponent},
   { path: 'contact', component: ContactComponent},
   { path: 'admin', component: AdminComponent},
-  { path: 'profile', component: ProfileComponent}
+  { path: 'profile', component: ProfileComponent},
+  { path: 'signup', component: SignupComponent  }
 ];

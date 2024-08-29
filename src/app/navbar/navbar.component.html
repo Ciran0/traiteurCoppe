@@ -124,7 +124,12 @@
     >
       contact
     </p>
-    <p onclick="document.getElementsByTagName('dialog')[0].showModal()" class="page">login/signup</p>
+    <p
+      onclick="document.getElementsByTagName('dialog')[0].showModal()"
+      class="page"
+    >
+      login/signup
+    </p>
     <p class="page">sign off</p>
     <p
       routerLink="/admin"
@@ -179,7 +184,12 @@
   >
     contact
   </p>
-  <p onclick="document.getElementsByTagName('dialog')[0].showModal()" class="spage">login/signup</p>
+  <p
+    onclick="document.getElementsByTagName('dialog')[0].showModal()"
+    class="spage"
+  >
+    login/signup
+  </p>
   <p class="spage">sign off</p>
   <p
     (click)="close()"
@@ -193,17 +203,42 @@
 </div>
 
 <div class="navstop"></div>
-<dialog >
-  <button onclick="document.getElementsByTagName('dialog')[0].close()" class="quit" type="button">X</button>
+<dialog class="main">
+  <button
+    onclick="document.getElementsByTagName('dialog')[0].close()"
+    class="quit"
+    type="button"
+  >
+    X
+  </button>
   <form>
     <label for="email">addresse email</label><br />
     <input type="text" name="email" /><br />
     <label for="passwd">mot de passe </label><br />
     <input type="password" name="passwd" /><br />
-    <button  type="button">login</button><br />
+    <button type="button">login</button><br />
   </form>
   <p>pas de compte ?</p>
   <br />
-  <p class="signup">en créer un</p>
+  <p
+    onclick="document.getElementsByTagName('dialog')[0].close()"
+    (click)="close()"
+    routerLink="/signup"
+    routerLinkActive="active"
+    ariaCurrentWhenActive="page"
+    class="signup"
+  >
+    en créer un
+  </p>
 </dialog>
+<style>
+  .main {
+    background: pink;
+    border-radius: 25px;
+  }
 
+  .signup {
+    background: lightpink;
+    padding: 2px;
+  }
+</style>

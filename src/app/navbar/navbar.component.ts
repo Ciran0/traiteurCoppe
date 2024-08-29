@@ -2,12 +2,11 @@ import { Component } from '@angular/core';
 import { ProfileCardComponent } from './profile-card/profile-card.component';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [LoginComponent, ProfileCardComponent, RouterLink, RouterLinkActive, RouterOutlet],
+  imports: [ ProfileCardComponent, RouterLink, RouterLinkActive, RouterOutlet],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
   animations: [
