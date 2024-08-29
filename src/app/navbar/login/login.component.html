@@ -1,24 +1,30 @@
-<dialog class="main">
-  <button type="button">X</button>
+<dialog data-modal class="main" open>
+  <button class="quit" type="button">X</button>
   <form>
     <label for="email">addresse email</label><br>
     <input type="text" name="email"><br>
     <label for="passwd">mot de passe </label><br>
     <input type="password" name="passwd"><br>
-    <button type="button">login</button><br>
+    <button data-close-modal type="button">login</button><br>
   </form>
   <p>pas de compte ?</p><br><p class="signup">en créer un</p>
 </dialog>
 
 <style>
-button{
-  position: reltive;
-  justify-self: left;
+.quit{
+  width:50px;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  position: relative;
+  top: -1vw;
+  left: -2vw;
 }
 .main{
   border-radius: 25px;
-  box-shadow:0 0 20px 5px black;
-  justify-content: center;
+  backdrop-filter: blur(10px);
+  margin:0;
+  box-shadow :0 0 20px black;
   display: flex;
   flex-flow: column;
   position: fixed;
@@ -27,10 +33,5 @@ button{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-}
-dialog::backdrop{
-  background: black;
-  height: 100%;
-  width: 100%;
-}
+  }
 </style>

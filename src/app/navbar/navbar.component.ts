@@ -33,6 +33,8 @@ import { LoginComponent } from './login/login.component';
 })
 export class NavbarComponent{
 
+
+
     isOpen = false;
   toggle() {
     this.isOpen = !this.isOpen;
